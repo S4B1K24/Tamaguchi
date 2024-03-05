@@ -11,7 +11,7 @@ class Tamagotchi
     public Tamagotchi(string name)
     {
         Name = name;
-        Health = 3;
+        Health = 10;
         Hunger = 0;
         Fatigue = 0;
         ExcessFeed = 0;
@@ -25,7 +25,7 @@ class Tamagotchi
         Console.WriteLine("Health: " + Health);
         Console.WriteLine("Hunger: " + Hunger);
         Console.WriteLine("Fatigue: " + Fatigue);
-        Console.WriteLine("Fatigue: " + Happiness);
+        Console.WriteLine("Happiness: " + Happiness);
     }
 
     public void Feed()
@@ -47,6 +47,11 @@ class Tamagotchi
     {
         Fatigue++;
 
+        if(Happiness < 10)
+        {
+            Happiness++;
+        }
+        
         if (Fatigue > 5 & Hunger < 10)
         {
             Hunger++;
@@ -61,6 +66,11 @@ class Tamagotchi
         if (Health < 10)
         {
             Health++;
+            
+        }
+
+        if (Happiness < 10)
+        {
             Happiness--;
         }
 
@@ -77,6 +87,11 @@ class Tamagotchi
             Health++;
         }
 
+        if (Happiness < 10)
+        {
+            Happiness++;
+        }
+        
         if (Hunger < 10)
         {
             Hunger++;
