@@ -113,6 +113,7 @@ class Program
         {
             
             pet.PrintStats();
+
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("1. Feed");
             Console.WriteLine("2. Play");
